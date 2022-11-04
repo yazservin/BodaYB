@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+{% block div %}<div class="fh5co-loader"></div>{% endblock %}	
+{% block content %}	
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(/static/images/IMG_1142.jpg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="fh5co-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>¡Confirma tu Asistencia!</h1>
+							<!--h2>Nos casamos y ustedes no pueden faltar en nuestro día más importante.</h2-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div id="fh5co-couple" style="padding: 0em 0;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center animate-box">
+					<div data-aos="zoom-in" data-aos-duration="3000" class="col-10  row justify-content-center align-items-center  " style="    padding: 0px;
+					margin-top: 37px;
+					margin-bottom: 37px;">
+						<img src="/static/images/lateral2.png" style="    height: 8rem;
+						margin-bottom: 25px;">	
+						<p style="font-size: 25px;">¡Nos casamos y ustedes no pueden faltar en nuestro día más importante!</p>
+						<img src="/static/images/lateral.png" style="height: 8rem;">
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div id="fh5co-started" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(/static/images/prueba2.jpg);" data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-md-push-4 animate-box"  id="div_buscar" style="border:4px solid #FFB74D; height:510px; width: 450px; padding: 20px;" >
+					<h3 style="color: #FFFF; position: relative;
+					top: 1em; text-align: center;">CONFIRMACIÓN</h3>
+					<p style="color: #FFFF; position: relative;
+					top: 2em; text-align: center;">INGRESA TU CÓDIGO DE INVITADO </p>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<input type="text" id="codigo" name="codigo" class="form-control" placeholder="Código" style="color: #080707;
+								position: relative;
+								top: 3em;">
+							</div>
+						</div>
+						<div class="form-group" style="text-align: center;">
+							<button class="btn btn-primary btncode" style=" height: 42px;
+							height: 35px;
+							background: #FFB74D;
+							font-size: 12px;
+							font-weight: 100;
+							padding-left: 25px;
+							padding-right: 25px;
+							position: relative;
+                            top: 7em;">buscar</button>
+							
+						</div>
+				</div>
+				<div class="col-md-4 col-md-push-4 animate-box" id="div_confirmacion" style="display: none; border:3px solid #FFB74D; height:510px; width: 450px; padding: 20px;" >
+					<h2 style="color: #FFFF; position: relative;
+					top: 0.5em; text-align: center;">INVITACIÓN</h2>
+					<div id="lista-invitados"> 
+						<h4 id="familia" style="color: #FFFF; position: relative;
+					top: 1em; text-align: center;"></h4>
+						<p style="color: #FFFF; position: relative;
+						top: 1em; text-align: -webkit-auto; font-size: 14px;">¡Te invitamos a nuestra boda! Esperamos que puedas asistir.</p>
+					</div>
+					<div id="countpersonas" class="col-md-12" style="top: 7em; position:relative;">
+
+					</div>
+					<div class="col-md-12" style="top:11em; position:relative; text-align:center;">
+						<button class="btn btn-primary btn_regresar" style=" height: 42px;
+						height: 35px;
+						background: #FFB74D;
+						font-size: 12px;
+						font-weight: 100;
+						padding-left: 25px;
+						padding-right: 25px;
+						position: relative;" onClick="history.go(0);">Regresar</button>
+						<button class="btn btn-primary btn_continuar" style=" height: 42px;
+						height: 35px;
+						background: #FFB74D;
+						font-size: 12px;
+						font-weight: 100;
+						padding-left: 25px;
+						padding-right: 25px;
+						position: relative;">Continuar</button>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-push-4 animate-box" id="div_confi_listInvitados" style="display: none; border:3px solid #FFB74D; height:510px; width: 450px; overflow-y: scroll; padding: 20px;" >
+					<h3 style="color: #FFFF; position: relative;
+					top: 1em; text-align: center;">CONFIRMACIÓN DE INVITADOS</h3>
+					<div id="lista-invitados"> 
+						<h5 style="color: #FFFF; position: relative;
+						top: 2em; text-align: -webkit-auto;">Selecciona la casilla a lado del nombre de los invitados que desees confirmar.</h5>
+					</div>
+					<div id="tablePrintAdultos" style="position: relative;
+					top: 2em;"> 
+					</div> 
+					<div id="tablePrintNiños" style="position: relative;
+					top: 3em;"> 
+					</div> 
+					<div class="col-md-12" style="top:6em; position:relative; text-align:center;">
+						<button class="btn btn-primary btn_regresar" style=" height: 42px;
+						height: 35px;
+						background: #FFB74D;
+						font-size: 12px;
+						font-weight: 100;
+						padding-left: 25px;
+						padding-right: 25px;
+						position: relative;" onClick="history.go(0);">Regresar</button>
+						<button class="btn btn-primary btn_confi_asistencia" style=" height: 42px;
+						height: 35px;
+						background: #FFB74D;
+						font-size: 12px;
+						font-weight: 100;
+						padding-left: 25px;
+						padding-right: 25px;
+						position: relative;">Continuar</button>
+					</div>
+				</div>
+				<div class="col-md-4 col-md-push-4 animate-box" id="div_confi_asistencia" style="display: none; border:3px solid #FFB74D; height:510px; width: 450px;" >
+					<h3 style="color: #FFFF; position: relative;
+					top: 1em; text-align: center;">ESTÁS POR CONFIRMAR</h3>
+					<div id="invitados_confirmar" style="top:2em; position:relative; text-align:center;"> 
+					</div>
+					<div class="col-md-12" style="top:11em; position:relative; text-align:center;">
+						<button class="btn btn-primary btn_regresar" style=" height: 42px;
+						height: 35px;
+						background: #FFB74D;
+						font-size: 12px;
+						font-weight: 100;
+						padding-left: 25px;
+						padding-right: 25px;
+						position: relative;" onClick="history.go(0);">Regresar</button>
+						<button class="btn btn-primary btn_continuar_confi" style=" height: 42px;
+						height: 35px;
+						background: #FFB74D;
+						font-size: 12px;
+						font-weight: 100;
+						padding-left: 25px;
+						padding-right: 25px;
+						position: relative;" >Continuar</button>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div id="fh5co-couple" style="padding: 0em 0;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center animate-box">
+					<div data-aos="zoom-in" data-aos-duration="3000" class="col-10  row justify-content-center align-items-center  " style="    padding: 0px;
+					margin-top: 37px;
+					margin-bottom: 37px;">
+						<!-- <img src="/static/images/lateral2.png" style="    height: 8rem;
+						margin-bottom: 25px;">	 -->
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+{% endblock %}
+
+
